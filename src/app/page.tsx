@@ -34,24 +34,34 @@ export default function WelcomeHome() {
         </div>
 
         {/* Dynamic Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center max-w-md mt-4">
+        <div className="flex flex-wrap gap-4 w-full justify-center max-w-2xl mt-4">
           <Button
             variant="animated"
             size="lg"
-            onClick={() => router.push("/components")}
+            onClick={() => router.push("/dashboard")}
             leftIcon={<LayoutGrid className="w-5 h-5" />}
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto min-w-[200px]"
           >
-            Components Sandbox
+            SaaS Dashboard
           </Button>
 
           <Button
             variant="glass"
             size="lg"
+            onClick={() => router.push("/components")}
+            leftIcon={<Cpu className="w-5 h-5 text-blue-400" />}
+            className="w-full sm:w-auto min-w-[200px]"
+          >
+            Components Sandbox
+          </Button>
+
+          <Button
+            variant="outline"
+            size="lg"
             onClick={() => router.push("/loading")}
-            leftIcon={<Sparkles className="w-5 h-5 text-blue-400" />}
-            rightIcon={<ArrowRight className="w-5 h-5 opacity-60 group-hover:translate-x-1 transition-transform" />}
-            className="w-full sm:w-auto"
+            leftIcon={<Sparkles className="w-5 h-5 text-indigo-400" />}
+            rightIcon={<ArrowRight className="w-5 h-5 opacity-65 group-hover:translate-x-1 transition-transform" />}
+            className="w-full sm:w-auto min-w-[200px] border-slate-805/80 hover:border-slate-700"
           >
             Orbit Loader
           </Button>
