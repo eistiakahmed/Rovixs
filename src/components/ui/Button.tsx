@@ -2,7 +2,7 @@ import React from "react";
 import { Loader2 } from "lucide-react";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "link";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "link" | "glass" | "animated";
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
@@ -28,7 +28,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     // Base styles with micro-animations and smooth transitions
     const baseStyles =
-      "inline-flex items-center justify-center font-medium rounded-xl transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
+      "inline-flex items-center justify-center font-medium rounded-xl transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98] whitespace-nowrap";
 
     // Size variants
     const sizeStyles = {
@@ -49,6 +49,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         "bg-transparent text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-900",
       link:
         "bg-transparent text-primary hover:underline p-0 h-auto rounded-none focus:ring-0 active:scale-100 dark:text-blue-400",
+      glass:
+        "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.05)] focus:ring-white/20",
+      animated:
+        "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-[length:200%_auto] text-white hover:bg-[right_center] hover:shadow-[0_8px_25px_rgba(99,102,241,0.4)] transition-all duration-500",
     };
 
     return (
