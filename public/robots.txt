@@ -1,0 +1,69 @@
+# robots.txt for Rovixs Software Development Company
+# Updated: 2026-06-23
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and development pages
+Disallow: /dashboard/
+Disallow: /components/
+Disallow: /loading/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Disallow search and filter pages
+Disallow: /search?
+Disallow: /*?filter=
+Disallow: /*?sort=
+
+# Disallow thank you and confirmation pages
+Disallow: /thank-you
+Disallow: /confirmation
+
+# Disallow development/testing environments
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /test/
+
+# Allow specific important paths
+Allow: /services/
+Allow: /blog/
+Allow: /about/
+Allow: /contact/
+
+# Sitemap location
+Sitemap: https://rovixs.com/sitemap.xml
+
+# Crawl delay (optional, prevents server overload)
+Crawl-delay: 1
+
+# Specific bot rules
+# Google bot
+User-agent: Googlebot
+Allow: /
+
+# Bing bot
+User-agent: Bingbot
+Allow: /
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
