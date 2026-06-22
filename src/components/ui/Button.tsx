@@ -40,20 +40,21 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     // Color/Theme variants
     const variantStyles = {
       primary:
-        "bg-primary text-white hover:bg-blue-700 hover:shadow-[0_8px_20px_rgba(37,99,235,0.3)] dark:hover:shadow-[0_8px_20px_rgba(37,99,235,0.4)]",
+        "bg-primary text-white hover:bg-blue-600 hover:shadow-[0_8px_22px_rgba(59,130,246,0.35)]",
       secondary:
-        "bg-secondary text-white hover:bg-slate-800 hover:shadow-[0_8px_20px_rgba(15,23,42,0.2)] dark:bg-slate-900 dark:hover:bg-slate-800 dark:border dark:border-slate-800",
+        "bg-secondary text-white hover:bg-sky-600 hover:shadow-[0_8px_22px_rgba(14,165,233,0.35)]",
       outline:
-        "border border-slate-200 bg-transparent text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-900",
+        "border border-blue-800/80 bg-transparent text-blue-100 hover:bg-blue-950/30 hover:border-blue-500 hover:text-white",
       ghost:
-        "bg-transparent text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-900",
+        "bg-transparent text-blue-200 hover:bg-blue-950/20 hover:text-white",
       link:
-        "bg-transparent text-primary hover:underline p-0 h-auto rounded-none focus:ring-0 active:scale-100 dark:text-blue-400",
+        "bg-transparent text-primary hover:underline p-0 h-auto rounded-none focus:ring-0 active:scale-100",
       glass:
         "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30 hover:shadow-[0_8px_32px_rgba(255,255,255,0.05)] focus:ring-white/20",
       animated:
-        "bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-[length:200%_auto] text-white hover:bg-[right_center] hover:shadow-[0_8px_25px_rgba(99,102,241,0.4)] transition-all duration-500",
+        "bg-gradient-to-r from-primary via-secondary to-blue-800 bg-[length:200%_auto] text-white hover:bg-[right_center] hover:shadow-[0_8px_25px_rgba(14,165,233,0.4)] transition-all duration-500",
     };
+
 
     return (
       <button
